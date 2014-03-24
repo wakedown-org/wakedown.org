@@ -7,7 +7,15 @@
   		font-size: 80%;
   	}
   </style>
-  <body>
+  <script>
+  	function setFont() {
+  		var pageSize = window.innerWidth/30;
+  		pageSize = Math.max(pageSize, 14);
+  		pageSize = Math.min(pageSize, 30);
+  		document.body.style.fontSize = pageSize;
+   	}
+  </script>
+  <body onresize="setFont()" onload="setFont()">
 		<h1>fumasa</h1>
   </body>
 </html>
